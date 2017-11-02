@@ -1,0 +1,7 @@
+# Build files (Linux and Windows)
+*.bin
+*.exe
+
+# Sublime files
+*sublime-project
+*sublime-workspace
