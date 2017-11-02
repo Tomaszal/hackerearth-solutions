@@ -25,12 +25,16 @@ int main()
 {
 	scanf("%d %d\n%d ", &n, &q, array);
 
+	/* Build an array of sums */
+
 	for (p = array + 1; p - array < n; p++)
 	{
 		scanf("%d ", p);
 
 		*p += *(p - 1);
 	}
+
+	/* Calculate the answer for each query */
 
 	for (; q > 0; q--)
 	{
