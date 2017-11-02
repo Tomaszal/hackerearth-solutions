@@ -1,8 +1,24 @@
-// Two Strings
-// https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/two-strings-4/
+/*
+ * Two Strings
+ * https://goo.gl/eeuxVJ
+ * ---------------------
+ *
+ * -Description:
+ *  Given two strings of equal length, you have to tell whether they both
+ *  strings are identical. Two strings S1 and S2 are said to be identical, if
+ *  any of the permutation of string S1 is equal to the string S2.
+ *
+ * -Input:
+ *  First line, contains an intger T denoting no. of test cases. Each test
+ *  consists of a single line, containing two space separated strings
+ *  S1 and S2 of equal length.
+ *
+ * -Output:
+ *  For each test case, if any of the permutation of string S1 is equal to the
+ *  string S2 print YES else print NO.
+ */
 
 #include <stdio.h>
-#include <stdbool.h>
 
 #define SIZE ('z' - 'a')
 
@@ -16,7 +32,7 @@ int main()
     
     for (; t > 0; t--)
     {
-    	// Read first string and add values to hash table
+    	/* Read first string and add values to hash table */
 
         scanf("%s", string);
         
@@ -25,7 +41,7 @@ int main()
             letters[*s - 'a']++;
         }
 
-        // Read second string and subtract values from hash table
+        /* Read second string and subtract values from hash table */
 
         scanf("%s", string);
         
@@ -34,7 +50,7 @@ int main()
             letters[*s - 'a']--;
         }
 
-        // Check if hash table values are balanced (equal to 0)
+        /* Check if hash table values are balanced (equal to 0) */
         
         flag = 1;
         
@@ -46,7 +62,7 @@ int main()
             *l = 0;
         }
 
-        // Output result
+        /* Output result */
         
         if (flag)
             printf("YES\n");
