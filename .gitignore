@@ -3,5 +3,4 @@
 *.exe
 
 # Sublime files
-*sublime-project
 *sublime-workspace
