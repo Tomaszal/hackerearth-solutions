@@ -10,7 +10,7 @@ int i, j, n, flag[1001];
 
 int main()
 {
-    scanf ("%d", &n);
+    scanf("%d", &n);
     
     flag[1] = 1;
     
@@ -22,7 +22,7 @@ int main()
         }
         else
         {
-            printf ("%d ", i);
+            printf("%d ", i);
             
             for (j = i; j < n; j += i)
             {

@@ -7,7 +7,7 @@ char s[100000000], *p;
 
 int n;
 
-int main ()
+int main()
 {
 	scanf("%s\n%d", s, &n);
 
