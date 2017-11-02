@@ -4,7 +4,6 @@
 // Done by using Sieve of Eratosthenes
 
 #include <stdio.h>
-#include <stdbool.h>
 
 int i, j, n, flag[1001];
 
