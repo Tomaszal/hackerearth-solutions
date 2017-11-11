@@ -5,27 +5,31 @@
  *
  * -Description:
  *  Given an array of positive and negative integers, denoting different types
- *  of parentheses. The positive numbers x[i] denotes opening parentheses of type
- *  x[i] and negative number −x[i] denotes closing parentheses of type x[i].
- *  Open parentheses must be closed by the same type of parentheses. Open
+ *  of parentheses. The positive numbers x[i] denotes opening parentheses of
+ *  type x[i] and negative number −x[i] denotes closing parentheses of type
+ *  x[i]. Open parentheses must be closed by the same type of parentheses. Open
  *  parentheses must be closed in the correct order, i.e., never close an open
  *  pair before its inner pair is closed (if it has an inner pair). Thus,
  *  [1, 2, −2, −1] is balanced, while [1, 2, −1, −2] is not balanced.
  *  You have to find out the length of the longest subarray that is balanced.
  *
  * -Input:
- *  First line contains an input N (1 <= N <= 2 ∗ 10^5), denoting
- *  the number of parentheses. Second line contains N N space separated
- *  integers. x[i] (−10^5 <= x[i] <= 10^5 , x[i] != 0) denoting the i-th
+ *  First line contains an input N, denoting the number of parentheses.
+ *  Second line contains N space separated integers. x[i] denoting the i-th
  *  parentheses of the array.
  *
  * -Output:
  *  Print the length of the longest subarray that is balanced.
+ *
+ * -Constraints:
+ *  1 <= N <= 200000
+ *  -100000 <= x[i] <= 100000
+ *  x[i] != 0
  */
 
 #include <stdio.h>
 
-int n, x, i, parentheses[100000], *top;
+int n, x, i, parentheses[200000], *top;
 
 int streak, streak_index, streak_old, streak_max;
 
@@ -41,22 +45,39 @@ int main()
 
 		if (top != parentheses && x < 0 && *top == (-1 * x))
 		{
+			// Pop the top element of the stack
+			// if it is a closing parenthesis
+
 			top--;
 
-			if (streak_index + 2 == i)
-				streak = streak_old + 1;
-			else
-				streak++;
+			// If current streak goes after the old streak
+			// continue counting from where we left off
 
-			streak_index = i;
+			if (streak_index + 2 == i)
+				streak = streak_old;
+
+			// Increace the current streak by one
+
+			streak++;
+
+			// Set old streak to the current streak and update it's index
+
 			streak_old = streak;
+			streak_index = i;
+
+			// Assign new max streak if needed
 
 			if (streak_max < streak)
 				streak_max = streak;
 		}
 		else
 		{
+			// Push a new element to the top of the
+			// stack if it is an opening parenthesis.
+
 			*(++top) = x;
+
+			// Reset the current streak
 
 			streak = 0;
 		}
