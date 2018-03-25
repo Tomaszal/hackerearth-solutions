@@ -1,28 +1,3 @@
-/*
- * Magical Word
- * https://goo.gl/16fSmg
- * ---------------------
- *
- * -Description:
- *  A word which consist of alphabets whose ASCII values is a prime number is
- *  an Dhananjay's Magical word. An alphabet is Dhananjay's Magical alphabet if
- *  its ASCII value is prime.
- *
- *  Rules for converting:
- *    1. Each character should be replaced by the nearest Dhananjay's Magical
- *       alphabet.
- *    2. If the character is equidistant with 2 Magical alphabets. The one with
- *       lower ASCII value will be considered as its replacement.
- *
- * -Input:
- *  First line of input contains an integer T number of test cases. Each test
- *  case contains an integer N (denoting the length of the string) and a
- *  string S.
- *
- * -Output:
- *  For each test case, print Dhananjay's Magical Word in a new line.
- */
-
 #include <stdio.h>
 
 /* Checks if character's ASCII value is prime */

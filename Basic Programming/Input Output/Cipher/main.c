@@ -1,21 +1,3 @@
-/*
- * Cipher
- * https://goo.gl/nM9B1M
- * ---------------------
- *
- * -Description:
- *  You are assigned to develop a cipher program to encrypt the message.
- *  Your cipher must rotate every character in the message by a fixed number
- *  making it unreadable by enemies.
- *
- * -Input:
- *  First line contains the string to convert.
- *  Second line contains the number, encrypt key.
- *
- * -Output:
- *	Encrypt and print the resulting string.
- */
-
 #include <stdio.h>
 
 char s[100000000], *p;

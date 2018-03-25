@@ -1,34 +1,3 @@
-/*
- * Fight for Laddus
- * https://goo.gl/tACnDn
- * ---------------------
- *
- * -Description:
- *  Tuntun Mausi challenged Bheem and his team to solve a problem. Raju, Chutki
- *  and Bheem are trying to solve this problem but are unable to do so. As you
- *  are a good friend of Raju, he asks for your help. Given an array, For each
- *  element find the value of nearest element to the right which is having
- *  frequency greater than as that of current element. If there does not exist
- *  an answer for a position, then print '-1' Please help Raju and his team to
- *  solve this problem to get the Laddus.
- *
- * -Input:
- *  First line contains T denoting the no of test cases.
- *  First line of each test case contains N denoting the no of elements
- *  in array.
- *  Second line of each test case contains N integers (A[1] - A[n])
- *  denoting the given array.
- *
- * -Output:
- * For each test case print space separated N numbers denoting
- * the answer corresponding answer.
- *
- * -Constraints:
- * T <= 100
- * 1 <= N <= 100000
- * 1 <= A[i] <= 100000
- */
-
 #include <stdio.h>
 #include <string.h>
 

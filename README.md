@@ -6,6 +6,5 @@ The goal of this repository is both to practice solving intricate problems mysel
 
 ## ToDo
 
-+ Add `readme` file to every problem.
 + Clean up some solutions.
 + Keep solving problems.

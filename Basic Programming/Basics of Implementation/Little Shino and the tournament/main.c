@@ -1,30 +1,3 @@
-/*
- * Little Shino and the tournament
- * https://goo.gl/hb92Nk
- * ---------------------
- *
- * -Description:
- *  Little Shino is interested in the fighting tournaments. Once she went to
- *  watch one of the tournaments. There were N fighters and i-th fighter will
- *  be represented by i. Each fighter has some distinct strength. Rules of the
- *  tournament are:
- *
- *    1. Each fight will have 2 fighters.
- *    2. In a fight, fighter with more strength will win.
- *    3. In one round, 1st fighter will fight against 2nd fighter, 3rd fighter
- *       will fight against 4th fighter and so on. If there is odd number of
- *       fighters, last one will qualify to the next round without fighting.
- *
- * -Input:
- *  First line contains 2 integers, N and Q, number of fighters and number of
- *  queries. Second line contains N space separated integers. k-th integer
- *  represents the strength of k-th fighter.
- *  Next Q line contain one integer i each, denoting Q queries.
- *
- * -Output:
- *  For each query, print the number of fights i-th fighter will take part in.
- */
-
 #include <stdio.h>
 
 struct fighter
